@@ -1,0 +1,15 @@
+<head>
+    <script>
+        function calculate(num_a, num_b) {
+            if (num_a >= 0 && num_b >= 0) return (num_a - num_b);
+            else if (num_a < 0 && num_b < 0) return (num_a * num_b);
+            else if (num_a < 0 && num_b > 0) return (num_a + num_b);
+            else if (num_a > 0 && num_b < 0) return (num_a + num_b);
+        }
+        console.log(calculate(2, 3));
+        console.log(calculate(-2, -3));
+        console.log(calculate(-2, 3));
+        console.log(calculate(2, -3))
+
+    </script>
+</head>
