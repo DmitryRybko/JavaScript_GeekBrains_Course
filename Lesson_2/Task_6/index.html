@@ -1,0 +1,39 @@
+<head>
+    <script>
+        function addition(num1, num2) {
+            return (num1 + num2)
+        }
+        function extraction(num1, num2) {
+            return (num1 - num2)
+        }
+        function multiplication(num1, num2) {
+            return (num1 * num2)
+        }
+        function division(num1, num2) {
+            return (num1 / num2)
+        }
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case "add":
+                    return addition(arg1, arg2);
+                case "extr":
+                    return extraction(arg1, arg2);
+                case "multipl":
+                    return multiplication(arg1, arg2);
+                case "divi":
+                    return division(arg1, arg2);
+                default:
+                    console.log("неизвестное название операции");
+                    break;
+            }
+        }
+        let a = 3
+        let b = 2
+        console.log(mathOperation(a, b, "add"));
+        console.log(mathOperation(a, b, "extr"));
+        console.log(mathOperation(a, b, "multipl"));
+        console.log(mathOperation(a, b, "divi"));
+
+    </script>
+</head>
