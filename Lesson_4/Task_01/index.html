@@ -1,0 +1,38 @@
+<body>
+    <script>
+        function convertNumToObject(numb) {
+
+            if (numb <= 0 || numb > 999) {
+                console.log(`число ${numb} вне допустимого диапазона от 0 до 999`);
+                return {}
+            }
+
+            let digiObject = {}
+
+            for (i = 0; i < 3; i++) {
+
+                digit = numb % 10
+                switch (i) {
+                    case 0:
+                        digiObject['единицы'] = digit
+                        break
+                    case 1:
+                        digiObject['десятки'] = digit
+                        break
+                    case 2:
+                        digiObject['сотни'] = digit
+                        break
+                }
+
+                numb = (numb - digit) / 10
+
+            }
+            return digiObject
+        }
+
+        let numb = 839
+        let numText = convertNumToObject(numb)
+        console.log(numText);
+
+    </script>
+</body>
