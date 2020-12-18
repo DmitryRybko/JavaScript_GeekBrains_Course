@@ -1,0 +1,43 @@
+<body>
+    <script>
+
+        var good01 = {
+            name: "товар_01",
+            qty: 5,
+            price: 1500
+        }
+
+        var good02 = {
+            name: "товар_02",
+            qty: 3,
+            price: 2000
+        }
+
+        var good03 = {
+            name: "товар_03",
+            qty: 7,
+            price: 800
+        }
+
+        var goodsBasket = {
+
+            goodsInBasket: { good01, good02, good03 },
+
+            getTotalPrice() {
+
+                let total_cost = 0
+
+                for (let n in this.goodsInBasket) {
+                    let good_cost = this.goodsInBasket[n].qty * this.goodsInBasket[n].price
+                    total_cost += good_cost
+                }
+                return total_cost
+            }
+
+        }
+
+        console.log(goodsBasket.goodsInBasket)
+        console.log(`стоимость товаров корзине: ${goodsBasket.getTotalPrice()} руб.`)
+
+    </script>
+</body>
