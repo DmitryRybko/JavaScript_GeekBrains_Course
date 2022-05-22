@@ -1,0 +1,28 @@
+// 2. Реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.
+
+<body>
+    <script>
+
+        function countBasketPrice(basket) {
+
+            let total_cost = 0
+
+            for (let n in goods_basket) {
+                let good_cost = goods_basket[n].qty * goods_basket[n].price
+                total_cost += good_cost
+                console.log(`Стоимость товара ${goods_basket[n].name}: ${good_cost}`);
+            }
+
+            return total_cost
+        }
+
+        let goods_basket = [
+            { name: "товар_01", qty: 5, price: 1500 },
+            { name: "товар_02", qty: 3, price: 2000 },
+            { name: "товар_03", qty: 7, price: 800 }]
+
+        total_cost = countBasketPrice(goods_basket)
+        console.log(`Общая стоимость корзины: ${total_cost} руб.`)
+
+    </script>
+</body>

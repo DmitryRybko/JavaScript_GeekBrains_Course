@@ -1,0 +1,36 @@
+// 1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100.
+
+<body>
+    <script>
+
+        var simp_list = []
+
+        function createSimpList(i, n) {
+            while (i <= n) {
+                if (simpNumbCheck(i) == false) {
+                    ++i
+                    continue
+                }
+                else {
+                    simp_list.push(i++)
+                }
+
+            }
+
+            function simpNumbCheck(simp_numb) {
+                let i = 2
+                while (i < simp_numb) {
+                    if (simp_numb % i == 0) return false
+                    i++
+                }
+                return true
+            }
+
+        }
+        let simp_start = 2
+        let simp_finish = 100
+        createSimpList(simp_start, simp_finish)
+        console.log(`все простые числа в промежутке от ${simp_start - 2} до ${simp_finish}: ${simp_list}`)
+
+    </script>
+</body>
