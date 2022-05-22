@@ -1,0 +1,33 @@
+body{
+    background: #ddd;
+}
+ 
+.chessboard {
+    display: inline-block;
+    margin: 0px;
+    
+}
+
+span {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 0px;
+    margin: 0px;
+    color:black
+}
+ 
+.black {
+    background: grey;
+}
+ 
+.white {
+    background: white;
+}
+
+.cell_text {
+    font-size: 30px;
+    padding-left: 0px;
+    margin: 0px;
+    
+}
